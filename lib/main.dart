@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:paspos/module/presentation/manager/login_cubit/login_cubit.dart';
+import 'package:paspos/module/presentation/manager/login_cubit/login_state.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    MaterialApp materialApp = MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -26,6 +29,10 @@ class MyApp extends StatelessWidget {
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
+
+    return MultiBlocProvider(
+        providers: [BlocProvider(create: (ctx) => LoginCubit())],
+        child: materialApp);
   }
 }
 
@@ -59,6 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+
+    context.read<LoginCubit>().submit();
   }
 
   @override
@@ -102,6 +111,16 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            BlocBuilder<LoginCubit, LoginState>(builder: (ctx, state) {
+              Widget widget;
+              if (state is LoadedLoginState) {
+                int counters = context.read<LoginCubit>().counter;
+                widget = Text(counters.toString());
+              } else {
+                widget = Container();
+              }
+              return widget;
+            })
           ],
         ),
       ),
