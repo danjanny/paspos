@@ -39,6 +39,7 @@ dependencies:
   injectable: ^2.1.1
   flutter_bloc: ^8.1.2
   equatable: ^2.0.5
+  qlevar_router: ^1.9.0
 
 dev_dependencies:
   flutter_test:

@@ -243,6 +243,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -435,6 +440,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.3"
+  qlevar_router:
+    dependency: "direct main"
+    description:
+      name: qlevar_router
+      sha256: "73ace1e019ec1be299d21379bafe475b3ab95ba9d7f4824efc634dec520999c5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0"
   recase:
     dependency: transitive
     description:

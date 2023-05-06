@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:paspos/module/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:paspos/module/presentation/manager/login_cubit/login_state.dart';
+import 'package:paspos/paspos_app.dart';
+import 'package:qlevar_router/qlevar_router.dart';
+
+import 'module/utils/viewport_util.dart';
 
 void main() {
-  runApp(const MyApp());
+  QR.setUrlStrategy();
+  runApp(const PasposApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -72,36 +77,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    var viewportUtil = ViewportUtil.getLimitMaxWidthHeight(
+        context, 375.0, const Color(0xffE4E4E4));
+
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+        body: Center(
+      child: Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: viewportUtil.edgeBorderColor!)),
+        constraints: BoxConstraints(
+            maxHeight: viewportUtil.maxHeight!,
+            maxWidth: viewportUtil.maxWidth),
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
@@ -124,11 +111,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+    ));
   }
 }
