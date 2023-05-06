@@ -29,7 +29,6 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Login Page asdasdasdasdas'),
-              Text('Login Page asdasdasdasdas')
             ],
           ),
         ),
