@@ -9,7 +9,10 @@ import 'module/utils/viewport_util.dart';
 
 void main() {
   QR.setUrlStrategy();
-  runApp(const PasposApp());
+  var blocWidget = MultiBlocProvider(
+      providers: [BlocProvider(create: (ctx) => LoginCubit())],
+      child: const PasposApp());
+  runApp(blocWidget);
 }
 
 class MyApp extends StatelessWidget {
@@ -72,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
 
-    context.read<LoginCubit>().submit();
+    // context.read<LoginCubit>().submit();
   }
 
   @override
