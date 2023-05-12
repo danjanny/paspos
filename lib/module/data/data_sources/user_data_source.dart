@@ -8,7 +8,10 @@ class UserDataSource implements IUserDataSource {
   @override
   Future<http.Response> getUserResponse(
       Map<String, dynamic> bodyRequest) async {
-    return http.post(Uri.parse('https://asd.com'),
-        headers: {}, body: jsonEncode({}));
+    return http.post(
+        Uri.parse(
+            'https://run.mocky.io/v3/bb9d8a1b-f643-4dd0-8c42-36b29735490b'),
+        headers: {},
+        body: jsonEncode({}));
   }
 }
