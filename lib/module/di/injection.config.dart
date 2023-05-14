@@ -19,7 +19,8 @@ import 'package:paspos/module/domain/repositories/i_user_repository.dart'
     as _i7;
 import 'package:paspos/module/domain/use_cases/i_user_login_use_case.dart'
     as _i5;
-import 'package:paspos/module/domain/use_cases/user_login_use_case.dart' as _i6;
+import 'package:paspos/module/domain/use_cases/user_login_form_use_case.dart'
+    as _i6;
 import 'package:paspos/module/presentation/manager/login_cubit/login_cubit.dart'
     as _i9;
 
@@ -36,7 +37,7 @@ extension GetItInjectableX on _i1.GetIt {
     );
     gh.factory<_i3.IUserDataSource>(() => _i4.UserDataSource());
     gh.factory<_i5.IUserLoginUseCase>(
-        () => _i6.UserLoginUseCase(gh<_i7.IUserRepository>()));
+        () => _i6.UserLoginFormUseCase(gh<_i7.IUserRepository>()));
     gh.factory<_i7.IUserRepository>(
         () => _i8.UserNewRepository(gh<_i3.IUserDataSource>()));
     gh.factory<_i9.LoginCubit>(

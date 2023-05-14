@@ -14,6 +14,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool _isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +23,44 @@ class _LoginPageState extends State<LoginPage> {
           child: PasposMainView(
               mainView: BlocListener<LoginCubit, LoginState>(
         listener: (ctx, state) {
+          if (state is LoadingLoginState) {
+            var currentWidth = MediaQuery.of(context).size.width;
+            var remainingWidth = currentWidth - 375;
+
+            showDialog(
+                context: ctx,
+                builder: (BuildContext dialogCtx) {
+                  return AlertDialog(
+                    insetPadding: EdgeInsets.fromLTRB(
+                        (remainingWidth / 2) + 125.0,
+                        10.0,
+                        (remainingWidth / 2) + 125.0,
+                        10.0),
+                    content: Container(
+                      decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(50.0))),
+                      width: 50,
+                      height: 50,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [CircularProgressIndicator(strokeWidth: 1.0)],
+                      ),
+                    ),
+                  );
+                });
+          }
+
           if (state is LoadedLoginState) {
-            var user = state.user.toString();
-            logSystem((LoginPage()).toString(), "login page", user);
+            Navigator.pop(ctx);
+            var user = state.user!;
+            showDialog(
+                context: ctx,
+                builder: (BuildContext ctx) {
+                  return AlertDialog(
+                    content: Text(user.phoneNumber!),
+                  );
+                });
           }
         },
         child: LoginPageFormWidget(

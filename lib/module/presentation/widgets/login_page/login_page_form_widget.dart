@@ -71,9 +71,6 @@ class _LoginPageFormWidgetState extends State<LoginPageFormWidget> {
                     minimumSize: const Size.fromHeight(55.0)),
                 onPressed: () {
                   if (_loginFormKey.currentState!.validate()) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Submit ok')),
-                    );
                     Map<String, dynamic> params = {
                       'username': _usernameController.text,
                       'password': _passwordController.text
