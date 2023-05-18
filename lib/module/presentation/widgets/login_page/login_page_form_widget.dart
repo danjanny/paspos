@@ -42,7 +42,7 @@ class _LoginPageFormWidgetState extends State<LoginPageFormWidget> {
                   hintText: "Username"),
               const SizedBox(height: 14.0),
               LoginFormWidget(
-                obscureText: _passwordVisible,
+                obscureText: !_passwordVisible,
                 controller: _passwordController,
                 errorValidationMessage: "Password harus diisi",
                 hintText: "Password",
@@ -53,9 +53,9 @@ class _LoginPageFormWidgetState extends State<LoginPageFormWidget> {
                       });
                     },
                     icon: Icon(
-                        _passwordVisible
-                            ? Icons.visibility_off
-                            : Icons.visibility,
+                        !_passwordVisible
+                            ? Icons.visibility
+                            : Icons.visibility_off,
                         size: 14.0)),
               ),
             ],
@@ -71,9 +71,6 @@ class _LoginPageFormWidgetState extends State<LoginPageFormWidget> {
                     minimumSize: const Size.fromHeight(55.0)),
                 onPressed: () {
                   if (_loginFormKey.currentState!.validate()) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Submit ok')),
-                    );
                     Map<String, dynamic> params = {
                       'username': _usernameController.text,
                       'password': _passwordController.text
@@ -89,7 +86,7 @@ class _LoginPageFormWidgetState extends State<LoginPageFormWidget> {
           ),
           Align(
             alignment: Alignment.center,
-            child: Text("Don't have account ? Login Now",
+            child: Text("Don't have account ? Sign Up Now",
                 style: TextStyle(
                     fontFamily: PasposConfig.fontFamily,
                     fontWeight: FontWeight.w400,

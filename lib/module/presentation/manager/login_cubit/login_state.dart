@@ -18,6 +18,12 @@ class GeneralErrorLoginState extends LoginState {
   const GeneralErrorLoginState({this.responseMessage});
 }
 
+class InvalidUserLoginState extends LoginState {
+  final String? responseMessage;
+
+  const InvalidUserLoginState({this.responseMessage});
+}
+
 class OfflineLoginState extends LoginState {}
 
 class TimeoutLoginState extends LoginState {}
