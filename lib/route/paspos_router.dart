@@ -3,6 +3,8 @@ import 'package:qlevar_router/qlevar_router.dart';
 
 class PasposRouter {
   static String loginPath = "/login-page";
+  static String entitiesPath = "/entities-page";
+  static String entityDetailPath = "/entity-detail-page";
   static String rootPath = "/";
 
   static final routes = [

@@ -86,7 +86,7 @@ class _LoginPageFormWidgetState extends State<LoginPageFormWidget> {
           ),
           Align(
             alignment: Alignment.center,
-            child: Text("Don't have account ? Login Now",
+            child: Text("Don't have account ? Sign Up Now",
                 style: TextStyle(
                     fontFamily: PasposConfig.fontFamily,
                     fontWeight: FontWeight.w400,
