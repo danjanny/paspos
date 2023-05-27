@@ -15,7 +15,6 @@ class PasposMainView extends StatelessWidget {
     return Scaffold(
         body: Center(
       child: Container(
-        padding: const EdgeInsets.all(24.0),
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             border: Border.all(color: viewportUtil.edgeBorderColor!)),

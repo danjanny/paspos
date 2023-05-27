@@ -28,71 +28,74 @@ class _LoginPageFormWidgetState extends State<LoginPageFormWidget> {
   Widget build(BuildContext context) {
     return Form(
       key: _loginFormKey,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const HeaderWordingWidget(),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              LoginFormWidget(
-                  controller: _usernameController,
-                  errorValidationMessage: "Username harus diisi",
-                  hintText: "Username"),
-              const SizedBox(height: 14.0),
-              LoginFormWidget(
-                obscureText: !_passwordVisible,
-                controller: _passwordController,
-                errorValidationMessage: "Password harus diisi",
-                hintText: "Password",
-                suffixIcon: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        _passwordVisible = !_passwordVisible;
-                      });
-                    },
-                    icon: Icon(
-                        !_passwordVisible
-                            ? Icons.visibility
-                            : Icons.visibility_off,
-                        size: 14.0)),
-              ),
-            ],
-          ),
-          Align(
-            alignment: Alignment.center,
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(Dimension.formBorderRadius)),
-                    backgroundColor: PasposColor.themeColor,
-                    minimumSize: const Size.fromHeight(55.0)),
-                onPressed: () {
-                  if (_loginFormKey.currentState!.validate()) {
-                    Map<String, dynamic> params = {
-                      'username': _usernameController.text,
-                      'password': _passwordController.text
-                    };
-                    return widget.onSubmit(params);
-                  }
-                },
-                child: Text('Login',
-                    style: TextStyle(
-                        fontFamily: PasposConfig.fontFamily,
-                        fontWeight: FontWeight.w600,
-                        fontSize: Dimension.buttonTextFontSize))),
-          ),
-          Align(
-            alignment: Alignment.center,
-            child: Text("Don't have account ? Sign Up Now",
-                style: TextStyle(
-                    fontFamily: PasposConfig.fontFamily,
-                    fontWeight: FontWeight.w400,
-                    fontSize: Dimension.loginFooterWording)),
-          )
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const HeaderWordingWidget(),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                LoginFormWidget(
+                    controller: _usernameController,
+                    errorValidationMessage: "Username harus diisi",
+                    hintText: "Username"),
+                const SizedBox(height: 14.0),
+                LoginFormWidget(
+                  obscureText: !_passwordVisible,
+                  controller: _passwordController,
+                  errorValidationMessage: "Password harus diisi",
+                  hintText: "Password",
+                  suffixIcon: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _passwordVisible = !_passwordVisible;
+                        });
+                      },
+                      icon: Icon(
+                          !_passwordVisible
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          size: 14.0)),
+                ),
+              ],
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                              Dimension.formBorderRadius)),
+                      backgroundColor: PasposColor.themeColor,
+                      minimumSize: const Size.fromHeight(55.0)),
+                  onPressed: () {
+                    if (_loginFormKey.currentState!.validate()) {
+                      Map<String, dynamic> params = {
+                        'username': _usernameController.text,
+                        'password': _passwordController.text
+                      };
+                      return widget.onSubmit(params);
+                    }
+                  },
+                  child: Text('Login',
+                      style: TextStyle(
+                          fontFamily: PasposConfig.fontFamily,
+                          fontWeight: FontWeight.w600,
+                          fontSize: Dimension.buttonTextFontSize))),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Text("Don't have account ? Sign Up Now",
+                  style: TextStyle(
+                      fontFamily: PasposConfig.fontFamily,
+                      fontWeight: FontWeight.w400,
+                      fontSize: Dimension.loginFooterWording)),
+            )
+          ],
+        ),
       ),
     );
   }

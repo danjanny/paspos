@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 import 'package:paspos/module/api/api_mock.dart';
@@ -15,7 +17,7 @@ class ProductDataSource implements IProductDataSource {
     String url = '${ApiMock.productsResponseSuccess}?$queryString';
     logSystem((ProductDataSource()).toString(), "url products", url);
 
-    return http.get(Uri.parse(url), headers: {});
+    return http.post(Uri.parse(url), headers: {}, body: jsonEncode({}));
   }
 
   @override
@@ -27,6 +29,6 @@ class ProductDataSource implements IProductDataSource {
     String url = '${ApiMock.productResponseSuccess}?$queryString';
     logSystem((ProductDataSource()).toString(), "url product", url);
 
-    return http.get(Uri.parse(url), headers: {});
+    return http.post(Uri.parse(url), headers: {}, body: jsonEncode({}));
   }
 }
