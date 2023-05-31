@@ -1,92 +1,96 @@
-[
-  {
-    "id": "1",
-    "productName": "SPOT ON 2723 Gatsu Kost",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
-    "productDesc": "Satiated with the adventures outside in the Njajunk City, you could take to the comfort and relaxation that the SPOT ON 2723 Gatsu Kost offers. Located close to Njajunk Train Station, the property is in vicinity of various famous shopping avenues and eateries in the bustling Kauman area.",
-    "productPrice": "75.142",
-    "productQty": "1",
-    "totalPrice": ""
-  },
-  {
-    "id": "2",
-    "productName": "OYO 90678 Omah Kulo Guest House",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/115425/medium/f17a28e41e5bbc65.jpg",
-    "productDesc": "OYO 90678 Omah Kulo Guest House is a budget hotel with standardised amenities at the best value. Located 22 km from Nganjuk City Square and 2 km from The Legend Waterpark Kertosono, this property offers a superior check-in experience with the assurance of an aesthetically pleasing room.",
-    "productPrice": "284.375",
-    "productQty": "1",
-    "totalPrice": ""
-  },
-  {
-    "id": "3",
-    "productName": "Capital O 92162 Hotel Wisata Karya",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/115425/medium/f17a28e41e5bbc65.jpg",
-    "productDesc": "OYO 90678 Omah Kulo Guest House is a budget hotel with standardised amenities at the best value. Located 22 km from Nganjuk City Square and 2 km from The Legend Waterpark Kertosono, this property offers a superior check-in experience with the assurance of an aesthetically pleasing room.",
-    "productPrice": "140.615",
-    "productQty": "1",
-    "totalPrice": ""
-  },
-  {
-    "id": "4",
-    "productName": "OYO 91825 Ayu Lestari Homestay",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/194691/large/c7a5039622325328.jpg",
-    "productDesc": "OYO 91825 Ayu Lestari Homestay is a hotel that offers standardised amenities with the best value for budget travellers. The hotel is located 23km from Nganjuk City Square and 3km from The Legend Waterpark Kertosono. With OYO 91825, you can expect a superior check-in experience guaranteed and an affordable stay with special rates for extended stay.",
-    "productPrice": "90.000",
-    "productQty": "1",
-    "totalPrice": ""
-  },
-  {
-    "id": "5",
-    "productName": "OYO 1984 Hotel Istana Family Syariah",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/86538/large/87886734f2888956.jpg",
-    "productDesc": "Nganjuk in Indonesia offers a myriad of beautiful sights and historical attractions. OYO 1984 Hotel Istana Family is a quick walk away from the Anjuk Ladang Museum and offers a comfortable lodging for travellers to Nganjuk. The must-visit Sedudu Waterfall is 31 km away, well connected via public or private transport.",
-    "productPrice": "91.832",
-    "productQty": "1",
-    "totalPrice": ""
-  },
-  {
-    "id": "6",
-    "productName": "SPOT ON 2723 Gatsu Kost",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
-    "productDesc": "Satiated with the adventures outside in the Njajunk City, you could take to the comfort and relaxation that the SPOT ON 2723 Gatsu Kost offers. Located close to Njajunk Train Station, the property is in vicinity of various famous shopping avenues and eateries in the bustling Kauman area.",
-    "productPrice": "75.142",
-    "productQty": "1",
-    "totalPrice": ""
-  },
-  {
-    "id": "7",
-    "productName": "OYO 90678 Omah Kulo Guest House",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/115425/medium/f17a28e41e5bbc65.jpg",
-    "productDesc": "OYO 90678 Omah Kulo Guest House is a budget hotel with standardised amenities at the best value. Located 22 km from Nganjuk City Square and 2 km from The Legend Waterpark Kertosono, this property offers a superior check-in experience with the assurance of an aesthetically pleasing room.",
-    "productPrice": "284.375",
-    "productQty": "1",
-    "totalPrice": ""
-  },
-  {
-    "id": "8",
-    "productName": "Capital O 92162 Hotel Wisata Karya",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/115425/medium/f17a28e41e5bbc65.jpg",
-    "productDesc": "OYO 90678 Omah Kulo Guest House is a budget hotel with standardised amenities at the best value. Located 22 km from Nganjuk City Square and 2 km from The Legend Waterpark Kertosono, this property offers a superior check-in experience with the assurance of an aesthetically pleasing room.",
-    "productPrice": "140.615",
-    "productQty": "1",
-    "totalPrice": ""
-  },
-  {
-    "id": "9",
-    "productName": "OYO 91825 Ayu Lestari Homestay",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/194691/large/c7a5039622325328.jpg",
-    "productDesc": "OYO 91825 Ayu Lestari Homestay is a hotel that offers standardised amenities with the best value for budget travellers. The hotel is located 23km from Nganjuk City Square and 3km from The Legend Waterpark Kertosono. With OYO 91825, you can expect a superior check-in experience guaranteed and an affordable stay with special rates for extended stay.",
-    "productPrice": "90.000",
-    "productQty": "1",
-    "totalPrice": ""
-  },
-  {
-    "id": "10",
-    "productName": "OYO 1984 Hotel Istana Family Syariah",
-    "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/86538/large/87886734f2888956.jpg",
-    "productDesc": "Nganjuk in Indonesia offers a myriad of beautiful sights and historical attractions. OYO 1984 Hotel Istana Family is a quick walk away from the Anjuk Ladang Museum and offers a comfortable lodging for travellers to Nganjuk. The must-visit Sedudu Waterfall is 31 km away, well connected via public or private transport.",
-    "productPrice": "91.832",
-    "productQty": "1",
-    "totalPrice": ""
-  }
-]
+{
+  "responseCode": "00",
+  "responseMessage": "Response has been successfully loaded",
+  "data": [
+    {
+      "id": "1",
+      "productName": "SPOT ON 2723 Gatsu Kost",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "Satiated with the adventures outside in the Njajunk City, you could take to the comfort and relaxation that the SPOT ON 2723 Gatsu Kost offers. Located close to Njajunk Train Station, the property is in vicinity of various famous shopping avenues and eateries in the bustling Kauman area.",
+      "productPrice": "75.142",
+      "productQty": "1",
+      "totalPrice": ""
+    },
+    {
+      "id": "2",
+      "productName": "OYO 90678 Omah Kulo Guest House",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "OYO 90678 Omah Kulo Guest House is a budget hotel with standardised amenities at the best value. Located 22 km from Nganjuk City Square and 2 km from The Legend Waterpark Kertosono, this property offers a superior check-in experience with the assurance of an aesthetically pleasing room.",
+      "productPrice": "284.375",
+      "productQty": "1",
+      "totalPrice": ""
+    },
+    {
+      "id": "3",
+      "productName": "Capital O 92162 Hotel Wisata Karya",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "OYO 90678 Omah Kulo Guest House is a budget hotel with standardised amenities at the best value. Located 22 km from Nganjuk City Square and 2 km from The Legend Waterpark Kertosono, this property offers a superior check-in experience with the assurance of an aesthetically pleasing room.",
+      "productPrice": "140.615",
+      "productQty": "1",
+      "totalPrice": ""
+    },
+    {
+      "id": "4",
+      "productName": "OYO 91825 Ayu Lestari Homestay",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "OYO 91825 Ayu Lestari Homestay is a hotel that offers standardised amenities with the best value for budget travellers. The hotel is located 23km from Nganjuk City Square and 3km from The Legend Waterpark Kertosono. With OYO 91825, you can expect a superior check-in experience guaranteed and an affordable stay with special rates for extended stay.",
+      "productPrice": "90.000",
+      "productQty": "1",
+      "totalPrice": ""
+    },
+    {
+      "id": "5",
+      "productName": "OYO 1984 Hotel Istana Family Syariah",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "Nganjuk in Indonesia offers a myriad of beautiful sights and historical attractions. OYO 1984 Hotel Istana Family is a quick walk away from the Anjuk Ladang Museum and offers a comfortable lodging for travellers to Nganjuk. The must-visit Sedudu Waterfall is 31 km away, well connected via public or private transport.",
+      "productPrice": "91.832",
+      "productQty": "1",
+      "totalPrice": ""
+    },
+    {
+      "id": "6",
+      "productName": "SPOT ON 2723 Gatsu Kost",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "Satiated with the adventures outside in the Njajunk City, you could take to the comfort and relaxation that the SPOT ON 2723 Gatsu Kost offers. Located close to Njajunk Train Station, the property is in vicinity of various famous shopping avenues and eateries in the bustling Kauman area.",
+      "productPrice": "75.142",
+      "productQty": "1",
+      "totalPrice": ""
+    },
+    {
+      "id": "7",
+      "productName": "OYO 90678 Omah Kulo Guest House",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "OYO 90678 Omah Kulo Guest House is a budget hotel with standardised amenities at the best value. Located 22 km from Nganjuk City Square and 2 km from The Legend Waterpark Kertosono, this property offers a superior check-in experience with the assurance of an aesthetically pleasing room.",
+      "productPrice": "284.375",
+      "productQty": "1",
+      "totalPrice": ""
+    },
+    {
+      "id": "8",
+      "productName": "Capital O 92162 Hotel Wisata Karya",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "OYO 90678 Omah Kulo Guest House is a budget hotel with standardised amenities at the best value. Located 22 km from Nganjuk City Square and 2 km from The Legend Waterpark Kertosono, this property offers a superior check-in experience with the assurance of an aesthetically pleasing room.",
+      "productPrice": "140.615",
+      "productQty": "1",
+      "totalPrice": ""
+    },
+    {
+      "id": "9",
+      "productName": "OYO 91825 Ayu Lestari Homestay",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "OYO 91825 Ayu Lestari Homestay is a hotel that offers standardised amenities with the best value for budget travellers. The hotel is located 23km from Nganjuk City Square and 3km from The Legend Waterpark Kertosono. With OYO 91825, you can expect a superior check-in experience guaranteed and an affordable stay with special rates for extended stay.",
+      "productPrice": "90.000",
+      "productQty": "1",
+      "totalPrice": ""
+    },
+    {
+      "id": "10",
+      "productName": "OYO 1984 Hotel Istana Family Syariah",
+      "thumbnailUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "productDesc": "Nganjuk in Indonesia offers a myriad of beautiful sights and historical attractions. OYO 1984 Hotel Istana Family is a quick walk away from the Anjuk Ladang Museum and offers a comfortable lodging for travellers to Nganjuk. The must-visit Sedudu Waterfall is 31 km away, well connected via public or private transport.",
+      "productPrice": "91.832",
+      "productQty": "1",
+      "totalPrice": ""
+    }
+  ]
+}

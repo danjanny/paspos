@@ -1,9 +1,19 @@
 {
-  "id": "1",
-  "productName": "SPOT ON 2723 Gatsu Kost",
-  "productImageUrl": "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
-  "productDesc": "Satiated with the adventures outside in the Njajunk City, you could take to the comfort and relaxation that the SPOT ON 2723 Gatsu Kost offers. Located close to Njajunk Train Station, the property is in vicinity of various famous shopping avenues and eateries in the bustling Kauman area.",
-  "productPrice": "75.142",
-  "productQty": "1",
-  "totalPrice": ""
+  "responseCode": "00",
+  "responseMessage": "Response has been successfully loaded",
+  "data": {
+    "id": "1",
+    "productName": "SPOT ON 2723 Gatsu Kost",
+    "productImageUrl": [
+      "https://images.oyoroomscdn.com/uploads/hotel_image/93849/medium/a1f5e0a5878316c2.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/189317/medium/bcb2a426d1860ccb.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/189317/medium/e6a42f50ab2e00af.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/189317/medium/80a955188319f358.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/189317/medium/b84a969c9e2a85a8.jpg"
+    ],
+    "productDesc": "Satiated with the adventures outside in the Nganjuk City, you could take to the comfort and relaxation that the SPOT ON 2723 Gatsu Kost offers. Located close to Njajunk Train Station, the property is in vicinity of various famous shopping avenues and eateries in the bustling Kauman area.",
+    "productPrice": "75.142",
+    "productQty": "1",
+    "totalPrice": ""
+  }
 }
