@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:paspos/module/data/models/product_model.dart';
 import 'package:paspos/module/presentation/manager/fetch_product_cubit/fetch_product_cubit.dart';
 import 'package:paspos/module/presentation/manager/fetch_product_cubit/fetch_product_state.dart';
 import 'package:paspos/module/presentation/pages/paspos_main_view.dart';
@@ -27,19 +28,80 @@ class _ProductPageState extends State<ProductPage> {
       child: PasposMainView(
           mainView: Stack(
         children: [
-          const CustomAppBar(),
           BlocConsumer<FetchProductCubit, FetchProductState>(
               builder: (ctx, state) {
-                return Container(
-                  color: Colors.orange,
-                  width: MediaQuery.of(context).size.width,
-                  child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [Text('ListView of product')],
-                  ),
-                );
+                if (state is LoadingFetchProductState) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (state is GeneralErrorFetchProductState) {
+                  String responseMessage = state.responseMessage!;
+                  return Container(
+                    color: Colors.orange,
+                    width: MediaQuery.of(context).size.width,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text(responseMessage)],
+                    ),
+                  );
+                } else if (state is OfflineFetchProductState) {
+                  return Container(
+                    color: Colors.blueGrey,
+                    width: MediaQuery.of(context).size.width,
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text('Offline')],
+                    ),
+                  );
+                } else if (state is TimeoutFetchProductState) {
+                  return Container(
+                    color: Colors.blueGrey,
+                    width: MediaQuery.of(context).size.width,
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text('Time out')],
+                    ),
+                  );
+                } else if (state is DataNotFoundFetchProductState) {
+                  String responseMessage = state.responseMessage!;
+                  return Container(
+                    color: Colors.blueGrey,
+                    width: MediaQuery.of(context).size.width,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text(responseMessage)],
+                    ),
+                  );
+                } else if (state is DataNotFoundFetchProductState) {
+                  String responseMessage = state.responseMessage!;
+                  return Container(
+                    color: Colors.blueGrey,
+                    width: MediaQuery.of(context).size.width,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text(responseMessage)],
+                    ),
+                  );
+                } else if (state is LoadedFetchProductState) {
+                  List<ProductModel> products = state.products!;
+                  return Container(
+                    color: Colors.cyan,
+                    width: MediaQuery.of(context).size.width,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text(products.toString())],
+                    ),
+                  );
+                } else {
+                  return Container(
+                    width: MediaQuery.of(context).size.width,
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text('Default State')],
+                    ),
+                  );
+                }
               },
-              listener: (ctx, state) {})
+              listener: (ctx, state) {}),
+          const CustomAppBar(),
         ],
       )),
     ));

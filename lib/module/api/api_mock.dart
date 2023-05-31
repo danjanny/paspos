@@ -15,12 +15,12 @@ class ApiMock {
   // LIST PRODUCT
   // 200
   static String productsResponseSuccess =
-      "https://run.mocky.io/v3/3f0dd22a-1fd2-4689-b6a4-992c46c17d2c";
+      "https://run.mocky.io/v3/8927b1be-0548-479d-b0b4-5cf84e30c7ad";
   static String productResponseSuccess =
       "https://run.mocky.io/v3/92ccdaba-23a8-4c76-94f8-1797fb108e94";
 
   // 404
-  static String productsNoFound =
+  static String productsNotFound =
       "https://run.mocky.io/v3/63472546-6f91-42a5-b3e2-2d6bd7275474";
 
   // selain 200, 404, 401, 403, 500

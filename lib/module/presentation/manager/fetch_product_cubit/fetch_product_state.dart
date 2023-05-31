@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:paspos/module/data/models/product_model.dart';
 
 import '../../../domain/entities/product.dart';
 
@@ -30,7 +31,7 @@ class OfflineFetchProductState extends FetchProductState {}
 class TimeoutFetchProductState extends FetchProductState {}
 
 class LoadedFetchProductState extends FetchProductState {
-  final List<Product>? products;
+  final List<ProductModel>? products;
 
   const LoadedFetchProductState({this.products});
 }

@@ -10,11 +10,7 @@ import 'package:paspos/module/utils/global_util.dart';
 class ProductDataSource implements IProductDataSource {
   @override
   Future<http.Response> getAllProduct(Map<String, dynamic> params) {
-    String queryString = Uri(
-        queryParameters:
-            params.map((key, value) => MapEntry(key, value.toString()))).query;
-
-    String url = '${ApiMock.productsResponseSuccess}?$queryString';
+    String url = ApiMock.productsResponseSuccess;
     logSystem((ProductDataSource()).toString(), "url products", url);
 
     return http.post(Uri.parse(url), headers: {}, body: jsonEncode({}));
