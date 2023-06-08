@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paspos/module/utils/config.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class CustomAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
-          color: Colors.green,
+          color: PasposConfig.themeColor,
           padding: const EdgeInsets.all(16.0),
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,

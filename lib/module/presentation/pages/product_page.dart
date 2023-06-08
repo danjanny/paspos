@@ -5,6 +5,7 @@ import 'package:paspos/module/presentation/manager/fetch_product_cubit/fetch_pro
 import 'package:paspos/module/presentation/manager/fetch_product_cubit/fetch_product_state.dart';
 import 'package:paspos/module/presentation/pages/paspos_main_view.dart';
 import 'package:paspos/module/presentation/widgets/product_page/custom_app_bar.dart';
+import 'package:paspos/module/presentation/widgets/product_page/product_item.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({Key? key}) : super(key: key);
@@ -70,26 +71,17 @@ class _ProductPageState extends State<ProductPage> {
                       children: [Text(responseMessage)],
                     ),
                   );
-                } else if (state is DataNotFoundFetchProductState) {
-                  String responseMessage = state.responseMessage!;
-                  return Container(
-                    color: Colors.blueGrey,
-                    width: MediaQuery.of(context).size.width,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Text(responseMessage)],
-                    ),
-                  );
                 } else if (state is LoadedFetchProductState) {
                   List<ProductModel> products = state.products!;
                   return Container(
-                    color: Colors.cyan,
-                    width: MediaQuery.of(context).size.width,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Text(products.toString())],
-                    ),
-                  );
+                      margin: EdgeInsets.only(top: 50.0),
+                      child: ListView.builder(
+                          itemCount: products.length,
+                          itemBuilder: (ctx, i) {
+                            return ProductItem(
+                              productModel: products[i],
+                            );
+                          }));
                 } else {
                   return Container(
                     width: MediaQuery.of(context).size.width,
