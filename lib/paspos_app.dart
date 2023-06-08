@@ -8,7 +8,7 @@ class PasposApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp.router(
-      theme: ThemeData(fontFamily: PasposConfig.fontFamily),
+      theme: ThemeData(fontFamily: PasposConfig.fontFamily, primaryColor: PasposConfig.themeColor),
       routeInformationParser: const QRouteInformationParser(),
       routerDelegate: QRouterDelegate(PasposRouter.routes));
 }
