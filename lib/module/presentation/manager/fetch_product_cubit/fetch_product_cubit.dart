@@ -15,8 +15,10 @@ import 'package:http/http.dart' as http;
 @injectable
 class FetchProductCubit extends Cubit<FetchProductState> {
   IGetProductUseCase? getProductUseCase;
+  IGetProductUseCase? qetProductUseCase;
 
-  FetchProductCubit(this.getProductUseCase) : super(InitialFetchProductState());
+  FetchProductCubit({this.getProductUseCase, this.qetProductUseCase})
+      : super(InitialFetchProductState());
 
   void getAllProduct(Map<String, dynamic> params) async {
     emit(LoadingFetchProductState());
@@ -26,7 +28,12 @@ class FetchProductCubit extends Cubit<FetchProductState> {
           .timeout(const Duration(seconds: 60));
 
       if (response.statusCode == 200) {
-        logSystem((FetchProductCubit(getProductUseCase)).toString(), "products",
+        logSystem(
+            (FetchProductCubit(
+                    getProductUseCase: getProductUseCase,
+                    qetProductUseCase: qetProductUseCase))
+                .toString(),
+            "products",
             response.body);
         var productResponseModel =
             ProductResponseModel.fromJson(jsonDecode(response.body));

@@ -49,8 +49,10 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i3.FetchProductCubit>(
-        () => _i3.FetchProductCubit(gh<_i4.IGetProductUseCase>()));
+    gh.factory<_i3.FetchProductCubit>(() => _i3.FetchProductCubit(
+          getProductUseCase: gh<_i4.IGetProductUseCase>(),
+          qetProductUseCase: gh<_i4.IGetProductUseCase>(),
+        ));
     gh.factory<_i4.IGetProductUseCase>(
         () => _i5.GetProductUseCase(gh<_i6.IProductRepository>()));
     gh.factory<_i7.IProductDataSource>(() => _i8.ProductDataSource());
