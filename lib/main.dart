@@ -22,7 +22,10 @@ void main() {
 
   var blocWidget = MultiBlocProvider(providers: [
     BlocProvider(create: (ctx) => LoginCubit(userLoginUseCase)),
-    BlocProvider(create: (ctx) => FetchProductCubit(getProductUseCase))
+    BlocProvider(
+        create: (ctx) => FetchProductCubit(
+            getProductUseCase: getProductUseCase,
+            qetProductUseCase: getProductUseCase))
   ], child: const PasposApp());
   runApp(blocWidget);
 }
