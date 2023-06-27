@@ -15,7 +15,7 @@ class ApiMock {
   // LIST PRODUCT
   // 200
   static String productsResponseSuccess =
-      "https://run.mocky.io/v3/8927b1be-0548-479d-b0b4-5cf84e30c7ad";
+      "https://run.mocky.io/v3/001b7f03-d9a7-4140-9617-87dbb20e2db6";
   static String productResponseSuccess =
       "https://run.mocky.io/v3/95c70155-4842-4ce2-95d8-f17d00df7a95";
 
