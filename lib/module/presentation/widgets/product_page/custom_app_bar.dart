@@ -4,9 +4,22 @@ import 'package:paspos/module/utils/config.dart';
 import 'package:paspos/module/utils/global_util.dart';
 
 class CustomAppBar extends StatelessWidget {
-  final Function(String)? callbackQuery;
+  final Color? color;
+  final Function(String)? searchQuery;
+  final Color? textColor;
+  final String? title;
+  final IconButton? suffixIconButton;
+  final bool? enableSearchBar;
 
-  const CustomAppBar({Key? key, this.callbackQuery}) : super(key: key);
+  const CustomAppBar(
+      {Key? key,
+      this.searchQuery,
+      this.color,
+      this.textColor,
+      this.title,
+      this.suffixIconButton,
+      this.enableSearchBar = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,27 +27,29 @@ class CustomAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
-          color: PasposConfig.themeColor,
+          color: color ?? PasposConfig.themeColor,
           padding: const EdgeInsets.all(16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text('Paspos',
+              Text(title ?? '',
                   style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,
                       fontWeight: FontWeight.w600)),
-              IconButton(
-                  onPressed: () {}, icon: Icon(Icons.add), color: Colors.white)
+              suffixIconButton ?? Container()
+              // IconButton(
+              //     onPressed: () {}, icon: Icon(Icons.add), color: Colors.white)
             ],
           ),
         ),
-        PasposSearchBar(
-          callbackQuery: (callbackQuery) {
-            logSystem((CustomAppBar()).toString(), "callback query",
-                callbackQuery.toString());
-          },
-        )
+        enableSearchBar!
+            ? PasposSearchBar(
+                callbackQuery: (callbackQuery) {
+                  searchQuery!(callbackQuery);
+                },
+              )
+            : Container()
       ],
     );
   }
