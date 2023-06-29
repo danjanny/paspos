@@ -91,7 +91,11 @@ class _ProductPageState extends State<ProductPage> {
             },
             listener: (ctx, state) {}),
         CustomAppBar(
-          callbackQuery: (query) {
+          title: 'Paspos',
+          suffixIconButton: IconButton(
+              onPressed: () {}, icon: Icon(Icons.add), color: Colors.white),
+          enableSearchBar: true,
+          searchQuery: (query) {
             logSystem(
                 (ProductPage()).toString(), "callback query", query.toString());
           },
