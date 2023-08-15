@@ -5,7 +5,6 @@ import '../../../domain/entities/product.dart';
 
 abstract class FetchProductState extends Equatable {
   const FetchProductState();
-
   @override
   List<Object?> get props => [];
 }
